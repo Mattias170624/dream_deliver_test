@@ -1,6 +1,8 @@
-import 'package:hub_test/routes.dart';
+import 'package:get/get.dart';
+import 'package:hub_test/routes/app_binding.dart';
+import 'package:hub_test/routes/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:hub_test/theme.dart';
+import 'package:hub_test/config/theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,10 +28,12 @@ class _AppState extends State<App> {
   /// directly inside [build].
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-              debugShowCheckedModeBanner: true,
-              routes: appRoutes,
-              theme: appTheme,
-          ); 
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: true,
+      initialRoute: Routes.homeScreen,
+      initialBinding: AppBinding(),
+      getPages: pages,
+      theme: appTheme,
+    );
   }
 }
