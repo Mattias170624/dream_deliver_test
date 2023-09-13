@@ -1,4 +1,4 @@
-import 'package:hub_test/restaurants/restaurants.dart';
+import 'package:hub_test/features/restaurants/view/screens/restaurants_screen.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeScreen extends StatelessWidget {
